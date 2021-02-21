@@ -1,7 +1,9 @@
-package com.gs.permutation;
+package com.gs.algorithms.backtracking.permutation;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /*
   IP :A1C
@@ -10,12 +12,12 @@ import java.util.List;
 public class UpperCaseLowerCasePermuteString {
 
 	private static List<String> permute(String s) {
-		List<String> result = new ArrayList<String>();
+		Set<String> result = new HashSet<String>();
 		helper(s, "", s.length(), result);
-		return result;
+		return new ArrayList<String>(result);
 	}
 
-	private static void helper(String s, String permute, int length, List<String> result) {
+	private static void helper(String s, String permute, int length, Set<String> result) {
 		if(permute.length() == length){
 			result.add(permute);
 			return;
@@ -35,7 +37,7 @@ public class UpperCaseLowerCasePermuteString {
 	}
 
 	public static void main(String[] args) {
-		String s = "ge";
+		String s = "ge1";
 		System.out.println(permute(s));
 	}
 }

@@ -1,4 +1,4 @@
-package com.gs.wordbreak;
+package com.gs.algorithms.backtracking.wordbreak;
 
 import java.util.*;
 
